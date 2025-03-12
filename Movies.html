@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="movies.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Piano and Movies</title>
+</head>
+<body>
+    <main>
+        <section>
+            <img src="Resources/Images/music-notes-panoramic-on-white-260nw-1539369389.webp" alt="Music Notes" class="Image-piano">
+
+            <nav>
+              
+            <ul>
+                <li><a href="index1.html"  target="_blank"> 🎼 Music and Emotions</a></li>
+                <li><a href="psychological.html"  target="_blank" >🎶 Psychological Impact</a></li>
+                <li><a href="Movies.html" target="_blank">𝄣 The Piano and Movies</a></li>
+                <li><a href="piano&lalaland.html"  target="_blank">𝄣 The Piano and La La Land</a></li>
+
+                <!-- <li><a href="#gallery"> 𝄠 Gallery</a></li> -->
+                <li class="piano-link"> <a href="index.html"  target="_blank"> 𝅘𝅥𝅮 Let's Play Magic</a></li>
+
+            </ul>
+            </nav>
+
+            <header>
+                <h1 style="color: rgb(190, 167, 33);">🎬 Piano and Movies</h1>
+            </header>
+        </section>
+
+        <!-- Card Grid -->
+        <section class="card-grid">
+            <!-- The Godfather (1972) -->
+            <article class="card">
+                <img src="Resources/Images/thegodfather.jpg" alt="The Godfather" class="card-image">
+                <header>
+                    <h2 class="card-title">The Godfather (1972)</h2>
+                </header>
+                <p class="card-description">A powerful mafia family's story of power, loyalty, and betrayal. Won 3 Oscars, including Best Picture.</p>
+                <button class="card-button" onclick="openPopup('popup1')">Watch Trailer</button>
+            </article>
+
+            <!-- The Lord of the Rings: The Fellowship of the Ring (2001) -->
+            <article class="card">
+                <img src="Resources/Images/lord.jpg" alt="The Lord of the Rings" class="card-image">
+                <header>
+                    <h2 class="card-title">The Lord of the Rings (2001)</h2>
+                </header>
+                <p class="card-description">An epic fantasy adventure about a quest to destroy a powerful ring. Won 4 Oscars.</p>
+                <button class="card-button" onclick="openPopup('popup2')">Watch Trailer</button>
+            </article>
+
+            <!-- Gladiator (2000) -->
+            <article class="card">
+                <img src="Resources/Images/grad.jpg" alt="Gladiator" class="card-image">
+                <header>
+                    <h2 class="card-title">Gladiator (2000)</h2>
+                </header>
+                <p class="card-description">A Roman general seeks revenge after being betrayed. Won 5 Oscars, including Best Picture.</p>
+                <button class="card-button" onclick="openPopup('popup3')">Watch Trailer</button>
+            </article>
+
+              <!-- Romeo and Juliet (1968) -->
+              <article class="card">
+                <img src="Resources/Images/romio.jpg" alt="Romeo and Juliet" class="card-image">
+                <header>
+                    <h2 class="card-title">Romeo and Juliet (1968)</h2>
+                </header>
+                <p class="card-description">Shakespeare's tragic love story brought to life. Won 2 Oscars for Best Cinematography and Costume Design.</p>
+                <button class="card-button" onclick="openPopup('popup6')">Watch Trailer</button>
+            </article>
+
+            <!-- Love Story (1970) -->
+            <article class="card">
+                <img src="Resources/Images/lovestory.jpg" alt="Love Story" class="card-image">
+                <header>
+                    <h2 class="card-title">Love Story (1970)</h2>
+                </header>
+                <p class="card-description">A heartbreaking romance about love and loss. Won 1 Oscar for Best Original Score.</p>
+                <button class="card-button" onclick="openPopup('popup7')">Watch Trailer</button>
+            </article>
+
+            <!-- Up (2009) -->
+            <article class="card">
+                <img src="Resources/Images/up.jpg" alt="Up" class="card-image">
+                <header>
+                    <h2 class="card-title">Up (2009)</h2>
+                </header>
+                <p class="card-description">An elderly man embarks on a grand adventure with a young boy. Won 2 Oscars, including Best Animated Feature.</p>
+                <button class="card-button" onclick="openPopup('popup8')">Watch Trailer</button>
+            </article>
+
+            <!-- The Pianist (2002) -->
+            <article class="card">
+                <img src="Resources/Images/pianist.jpg" alt="The Pianist" class="card-image">
+                <header>
+                    <h2 class="card-title">The Pianist (2002)</h2>
+                </header>
+                <p class="card-description">A pianist survives the Holocaust in Warsaw. Won 3 Oscars, including Best Director.</p>
+                <button class="card-button" onclick="openPopup('popup4')">Watch Trailer</button>
+            </article>
+
+            <!-- The Exorcist (1973) -->
+            <article class="card">
+                <img src="Resources/Images/the ex.jpg" alt="The Exorcist" class="card-image">
+                <header>
+                    <h2 class="card-title">The Exorcist (1973)</h2>
+                </header>
+                <p class="card-description">A terrifying tale of demonic possession. Won 2 Oscars and revolutionized horror films.</p>
+                <button class="card-button" onclick="openPopup('popup5')">Watch Trailer</button>
+            </article>
+
+          
+
+            <!-- La Bohème (1966) -->
+            <article class="card">
+                <img src="Resources/Images/labohime.jpg" alt="La Bohème" class="card-image">
+                <header>
+                    <h2 class="card-title">La Bohème (1966)</h2>
+                </header>
+                <p class="card-description">A classic opera about love and tragedy among artists in Paris. No major awards, but a timeless masterpiece.</p>
+                <button class="card-button" onclick="openPopup('popup9')">Watch Trailer</button>
+            </article>
+        </section>
+
+       <!-- Popups --> 
+
+<!-- The Godfather Popup -->
+<dialog id="popup1" class="videoPopup">
+    <article class="popup-content">
+        <button class="close" onclick="closePopup('popup1')" aria-label="Close popup">&times;</button>
+        <video controls class="popup-video">
+            <source src="Resources/Images/Movies/the godfather.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="popup-description">
+            <strong>The Godfather (1972)</strong> – A legendary mafia epic that explores power, loyalty, and betrayal. Winner of 3 Oscars, including Best Picture. 
+            <br><em>Music Feel:</em> The haunting and melancholic theme evokes a deep sense of nostalgia, power, and tragedy.
+        </p>
+    </article>
+</dialog>
+
+<!-- La Bohème Popup -->
+<dialog id="popup9" class="videoPopup">
+    <article class="popup-content">
+        <button class="close" onclick="closePopup('popup9')" aria-label="Close popup">&times;</button>
+        <video controls class="popup-video">
+            <source src="Resources/Images/Movies/la boheme.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="popup-description">
+            <strong>La Bohème</strong> – A timeless opera about love, youth, and tragedy among struggling artists in Paris. 
+            <br><em>Music Feel:</em> Its passionate and sorrowful melodies capture the beauty and heartbreak of fleeting love.
+        </p>
+    </article>
+</dialog>
+
+<!-- Gladiator Popup -->
+<dialog id="popup3" class="videoPopup">
+    <article class="popup-content">
+        <button class="close" onclick="closePopup('popup3')" aria-label="Close popup">&times;</button>
+        <video controls class="popup-video">
+            <source src="Resources/Images/Movies/gladitor.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="popup-description">
+            <strong>Gladiator (2000)</strong> – A Roman general seeks vengeance after being betrayed. Winner of 5 Oscars, including Best Picture. 
+            <br><em>Music Feel:</em> The powerful and emotional score, especially "Now We Are Free," inspires both strength and sorrow.
+        </p>
+    </article>
+</dialog>
+
+<!-- Love Story Popup -->
+<dialog id="popup7" class="videoPopup">
+    <article class="popup-content">
+        <button class="close" onclick="closePopup('popup7')" aria-label="Close popup">&times;</button>
+        <video controls class="popup-video">
+            <source src="Resources/Images/Movies/love story.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="popup-description">
+            <strong>Love Story (1970)</strong> – A heartbreaking romance about two lovers from different backgrounds facing life's struggles. 
+            <br><em>Music Feel:</em> The touching theme song evokes deep sadness and pure love, leaving a lasting emotional impact.
+        </p>
+    </article>
+</dialog>
+
+<!-- The Lord of the Rings Popup -->
+<dialog id="popup2" class="videoPopup">
+    <article class="popup-content">
+        <button class="close" onclick="closePopup('popup2')" aria-label="Close popup">&times;</button>
+        <video controls class="popup-video">
+            <source src="Resources/Images/Movies/lord of rings.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="popup-description">
+            <strong>The Lord of the Rings Trilogy</strong> – A grand fantasy epic of friendship, courage, and the battle between good and evil. Winner of multiple Oscars. 
+            <br><em>Music Feel:</em> The soundtrack is epic and adventurous, instilling awe, wonder, and determination.
+        </p>
+    </article>
+</dialog>
+
+<!-- Romeo and Juliet Popup -->
+<dialog id="popup6" class="videoPopup">
+    <article class="popup-content">
+        <button class="close" onclick="closePopup('popup6')" aria-label="Close popup">&times;</button>
+        <video controls class="popup-video">
+            <source src="Resources/Images/Movies/romio and joliet.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="popup-description">
+            <strong>Romeo and Juliet</strong> – Shakespeare's classic love story of star-crossed lovers caught in a tragic fate. 
+            <br><em>Music Feel:</em> The dramatic and romantic score highlights love, passion, and inevitable heartbreak.
+        </p>
+    </article>
+</dialog>
+
+<!-- Up Popup -->
+<dialog id="popup8" class="videoPopup">
+    <article class="popup-content">
+        <button class="close" onclick="closePopup('popup8')" aria-label="Close popup">&times;</button>
+        <video controls class="popup-video">
+            <source src="Resources/Images/Movies/up.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="popup-description">
+            <strong>Up (2009)</strong> – An uplifting adventure about an elderly man fulfilling his lifelong dream with an unexpected companion. Won 2 Oscars. 
+            <br><em>Music Feel:</em> The heartfelt theme, "Married Life," brings warmth and nostalgia, blending joy and sorrow beautifully.
+        </p>
+    </article>
+</dialog>
+
+<!-- The Pianist Popup -->
+<dialog id="popup4" class="videoPopup">
+    <article class="popup-content">
+        <button class="close" onclick="closePopup('popup4')" aria-label="Close popup">&times;</button>
+        <video controls class="popup-video">
+            <source src="Resources/Images/Movies/the pianist.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="popup-description">
+            <strong>The Pianist (2002)</strong> – A gripping true story of a Jewish pianist's survival during World War II. Winner of 3 Oscars. 
+            <br><em>Music Feel:</em> The haunting piano pieces reflect deep sorrow, isolation, and resilience.
+        </p>
+    </article>
+</dialog>
+
+<!-- The Exorcist Popup -->
+<dialog id="popup5" class="videoPopup">
+    <article class="popup-content">
+        <button class="close" onclick="closePopup('popup5')" aria-label="Close popup">&times;</button>
+        <video controls class="popup-video">
+            <source src="Resources/Images/Movies/the exasorist.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="popup-description">
+            <strong>The Exorcist (1973)</strong> – One of the scariest horror films ever made, based on a true case of demonic possession. Won 2 Oscars. 
+            <br><em>Music Feel:</em> The eerie and unsettling "Tubular Bells" theme enhances the film's chilling and haunting atmosphere.
+        </p>
+    </article>
+</dialog>
+
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <!-- About Section -->
+            <section class="footer-section">
+                <h3>About Yara</h3>
+                <p>
+                    Hi, I'm Yara, an ITI graduate passionate about web development and design. 
+                    This project is a reflection of my journey and love for creating beautiful, 
+                    functional websites.
+                </p>
+            </section>
+
+            <!-- Quick Links Section -->
+            <section class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </section>
+
+            <!-- Opinion Form Section -->
+            <section class="footer-section">
+                <h3>Share Your Opinion</h3>
+                <form class="opinion-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+
+            <section class="footer-section">
+                <h3>Connect with Me</h3>
+                <ul>
+                    <li><a href="https://twitter.com/yourprofile">Twitter</a></li>
+                    <li><a href="https://instagram.com/yourprofile">Instagram</a></li>
+                    <li><a href="mailto:youremail@example.com">Email</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Yara | ITI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.showModal();
+        }
+
+        function closePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.close();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.section');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+      
+    });
+
+    </script>
+    <script src="https://kit.fontawesome.com/99a28a537a.js" crossorigin="anonymous"></script>
+</body>
+</html>

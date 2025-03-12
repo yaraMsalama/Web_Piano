@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "EB Garamond", serif;
+    font-weight: 500;
+    color: #C0C0C0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: whitesmoke;
+    padding: 0 10px;
+}
+
+nav {
+    background: rgba(40, 28, 54, 1);
+    /* //background: linear-gradient(80deg, #4829b3, #0000ff, #3b269d, #9370DB, #4829b3, #DDA0DD, #4829b3, #8c8ccf, #4829b3, #0000ff); */
+    background: linear-gradient(80deg, #007172,#007174);
+
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul li {
+    margin: 0 10px;
+    display: inline-block;
+
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+    color: #000000;
+}
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.14);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+ 
+
+
+.wrapper {
+    width: 800px;
+    border-radius: 20px;
+    padding: 35px 49px;
+    background-color: rgba(0, 0, 0, 1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h2 {
+    font-size: 1.6rem;
+    color: #E6E6FA; 
+}
+
+header .column {
+    display: flex;
+    align-items: center;
+}
+
+header .column span {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    font-weight: 500;
+    color: #E6E6FA; 
+}
+
+.volume-slider input {
+    width: 100%;
+    margin-top: 10px;
+    background-color: black;
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    accent-color: #9370DB; 
+    outline: none;
+}
+
+.volumn-checkbox input {
+    margin-right: 10px;
+    cursor: pointer;
+    appearance: none;
+    height: 30px;
+    width: 60px;
+    border-radius: 30px;
+    background: #808080;
+    position: relative;
+    outline: none;
+    margin-left: 20px;
+}
+
+.volumn-checkbox input:checked::before {
+    left: 35px;
+    background: #9370DB; 
+}
+
+.volumn-checkbox input::before {
+    transition: all 0.3s ease;
+    content: "";
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 5px;
+    border-radius: inherit;
+    position: absolute;
+    background: #C0C0C0;
+    transform: translateY(-50%);
+}
+
+.piano-keys {
+    display: flex;
+    margin-top: 40px;
+}
+
+
+
+
+
+.piano-keys .key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.piano-keys .white {
+    width: 70px;
+    height: 250px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: linear-gradient(#fff 95%, #eee 5%);
+}
+
+.piano-keys .white.active {
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+
+.piano-keys .black {
+    width: 44px;
+    height: 140px;
+    border-radius: 0 0 5px 5px;
+    margin: 0 -22px 0 -22px;
+    background: linear-gradient(#333, #000);
+    z-index: 2;
+}
+
+.piano-keys .black.active {
+    box-shadow: inset -5px 5px 20px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to bottom, #000, #434343);
+}
+
+.piano-keys span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 1.13rem;
+    text-align: center;
+    color: #9370DB; 
+}
+
+.piano-keys .key.hide span {
+    display: none;
+}
+
+body.magic-mode {
+    background: linear-gradient(135deg, #E6E6FA, #3b269d, #9370DB,#4829b3, #DDA0DD, #E6E6FA,#4829b3);
+    
+}
+
+.magic-mode .wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.magic-mode .piano-keys .white {
+    background: linear-gradient(#fff 95%, #eee 5%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.magic-mode .piano-keys .black {
+    background: linear-gradient(#333, #000);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.magic-mode .piano-keys .white.active {
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    box-shadow: inset -5px 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+.magic-mode .piano-keys .black.active {
+    background: linear-gradient(to bottom, #000, #434343);
+    box-shadow: inset -5px 5px 20px rgba(255, 255, 255, 0.1);
+}
+
+header button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9370DB; 
+    color: #E6E6FA; 
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(147, 112, 219, 0.5);
+}
+
+header button:hover {
+    background-color: #6A5ACD; 
+    box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
+}
+
+
+.magic-mode header button {
+    background-color: #BA55D3; 
+    box-shadow: 0 0 15px rgba(186, 85, 211, 0.7);
+}
+
+.magic-mode header button:hover {
+    background-color: #9370DB; 
+    box-shadow: 0 0 25px rgba(186, 85, 211, 0.9);
+}
+
+.back{
+    background:  rgba(186, 85, 211, 0.9);;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    animation: pulse 2s infinite;
+    margin-top: 700px;
+    margin-right: 60px;
+    width: 200px;
+    height: 70px;
+}
+.back:hover {
+    background: linear-gradient(45deg, #fad0c4, #781ab6);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    /* Glow effect */
+}   
+
+footer {
+    margin-top: 100px;
+    background: linear-gradient(80deg, #4829b3, #0000ff, #3b269d, #9370DB, #4829b3, #DDA0DD, #4829b3, #8c8ccf, #4829b3, #0000ff);
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    animation: gradientShift 10s infinite alternate;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ff9a9e;
+}
+
+/* Opinion Form Styles */
+.opinion-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.opinion-form input,
+.opinion-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.opinion-form input::placeholder,
+.opinion-form textarea::placeholder {
+    color: #ddd;
+}
+
+.opinion-form button {
+    background: #ff9a9e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.opinion-form button:hover {
+    background: #e74c3c;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
